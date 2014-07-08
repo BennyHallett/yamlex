@@ -1,4 +1,4 @@
-yamlex
+Yamlex
 ======
 
-YAML for Elixirr
+A YAML 1.2 parser for Elixir
