@@ -5,6 +5,8 @@ defmodule Yamlex.Mixfile do
     [app: :yamlex,
      version: "0.0.1",
      elixir: "~> 0.14.1",
+     description: description,
+     package: package
      deps: deps]
   end
 
@@ -14,5 +16,22 @@ defmodule Yamlex.Mixfile do
 
   defp deps do
     [{:yamerl, github: "yakaz/yamerl"}]
+  end
+
+  defp description do
+    """
+    Yamlex is a YAML parser.
+
+    In it's current implementation, it is a simple wrapper around yamerl, with tests
+    against it. In the future, Yamlex will be ported to a pure Elixir implementation.
+    """
+  end
+
+  defp package do
+    [
+      contributors: ["Benny Hallett"],
+      licenses: ["MIT"],
+      links: %{ "GitHub" => "https://github.com/bennyhallett/yamlex" }
+    ]
   end
 end
