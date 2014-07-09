@@ -8,4 +8,8 @@ defmodule Yamlex do
     { :ok, :yamerl_constr.string(text) }
   end
 
+  def parse_file(path) do
+    { :ok, :yamerl_constr.file(path) }
+  end
+
 end
