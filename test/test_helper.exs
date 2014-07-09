@@ -30,13 +30,23 @@ defmodule Helper.Files do
   end
 
   def list do
-  File.write test_file, """
-  ---
-  - one
-  - two
-  - three
-  """
-  test_file
+    File.write test_file, """
+    ---
+    - one
+    - two
+    - three
+    """
+    test_file
+  end
+
+  def hierarchy do
+    File.write test_file, """
+    ---
+    root:
+      one: 1
+      two: 2
+    """
+    test_file
   end
 
   def cleanup do

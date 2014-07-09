@@ -41,4 +41,14 @@ defmodule YamlexStringTest do
     """)
   end
 
+  test "parse hierarchy" do
+    assert  {:ok, [[ {'root', [ {'one', 1}, {'two', 2} ] } ]] } == Yamlex.parse_string(
+    """
+    ---
+    root:
+      one: 1
+      two: 2
+    """)
+  end
+
 end

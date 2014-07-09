@@ -25,4 +25,8 @@ defmodule YamlexFileTest do
     assert { :ok, [[ 'one', 'two', 'three' ]] } == Yamlex.parse_file Helper.Files.list
   end
 
+  test "parse hierarchy" do
+    assert  {:ok, [[ { 'root', [ {'one', 1}, {'two', 2} ] } ]] } == Yamlex.parse_file Helper.Files.hierarchy
+  end
+
 end
