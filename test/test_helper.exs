@@ -21,6 +21,14 @@ defmodule Helper.Files do
     test_file
   end
 
+  def key_no_value do
+    File.write test_file, """
+    ---
+    test:
+    """
+    test_file
+  end
+
   def cleanup do
     File.rm test_file
   end

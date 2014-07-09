@@ -23,4 +23,12 @@ defmodule YamlexStringTest do
     """)
   end
 
+  test "parse keys with no value" do
+    assert { :ok, [[ {'test', :null} ]] } == Yamlex.parse_string(
+    """
+    ---
+    test:
+    """)
+  end
+
 end
