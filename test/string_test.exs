@@ -31,4 +31,14 @@ defmodule YamlexStringTest do
     """)
   end
 
+  test "parse list" do
+    assert { :ok, [[ 'one', 'two', 'three' ]] } == Yamlex.parse_string(
+    """
+    ---
+    - one
+    - two
+    - three
+    """)
+  end
+
 end

@@ -21,4 +21,8 @@ defmodule YamlexFileTest do
     assert { :ok, [[ {'test', :null} ]] } == Yamlex.parse_file Helper.Files.key_no_value
   end
 
+  test "parse list" do
+    assert { :ok, [[ 'one', 'two', 'three' ]] } == Yamlex.parse_file Helper.Files.list
+  end
+
 end

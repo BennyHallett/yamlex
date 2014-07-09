@@ -29,6 +29,16 @@ defmodule Helper.Files do
     test_file
   end
 
+  def list do
+  File.write test_file, """
+  ---
+  - one
+  - two
+  - three
+  """
+  test_file
+  end
+
   def cleanup do
     File.rm test_file
   end
