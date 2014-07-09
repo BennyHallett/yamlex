@@ -3,7 +3,21 @@ ExUnit.start()
 defmodule Helper.Files do
 
   def empty do
-    File.write(test_file, "")
+    File.write test_file, ""
+    test_file
+  end
+
+  def header_newline do
+    File.write test_file, "---\n"
+    test_file
+  end
+
+  def key_value do
+    File.write test_file, """
+    ---
+    some: more
+    test: data
+    """
     test_file
   end
 
