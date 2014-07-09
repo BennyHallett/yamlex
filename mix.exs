@@ -9,7 +9,7 @@ defmodule Yamlex.Mixfile do
   end
 
   def application do
-    [applications: []]
+    [applications: [:yamerl]]
   end
 
   defp deps do
