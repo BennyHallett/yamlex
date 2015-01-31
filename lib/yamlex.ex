@@ -35,7 +35,7 @@ defmodule Yamlex do
       Yamlex.parse_string "---\\ntest: data\\none: 1"
   """
   def parse_string(text) do
-    { :ok, :yamerl_constr.string(text) }
+    { :ok, :yamerl.decode(text) }
   end
 
   @doc """
@@ -46,7 +46,7 @@ defmodule Yamlex do
       Yamlex.parse_string "/path/to/file"
   """
   def parse_file(path) do
-    { :ok, :yamerl_constr.file(path) }
+    { :ok, :yamerl.decode_file(path) }
   end
 
 end
